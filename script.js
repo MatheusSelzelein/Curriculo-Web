@@ -70,7 +70,7 @@ function init() {
     arrayParticula = [];
     const numeroDeParticulas = Math.min(150, Math.floor((canvas.height * canvas.width) / 9000));
 
-    for (let i = 0; i < numeroDeParticulas*3; i++) {
+    for (let i = 0; i < numeroDeParticulas*4; i++) {
         const size = Math.random() * 4 + 1;
         const x = Math.random() * (canvas.width - size * 4) + size * 2;
         const y = Math.random() * (canvas.height - size * 4) + size * 2;
