@@ -4,111 +4,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Matheus Selzelein, desenvolvedor Full-Stack.">
     <link rel="stylesheet" href="style.css">
-    <title>Matheus - Portifólio</title>
+    <title>Matheus - Portfólio</title>
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <canvas id="canvas1" aria-hidden="true"></canvas>
-    <div class="particulas"></div>
-    <nav class="navegacao">
-        <ul class="menu">
-            <li>
-                <a href="#inicio" class="menu-link">Inicio</a>
-            </li>
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
-            <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
-            </li>
-            <li>
-                <a href="#contato" class="menu-link">Contato</a>
-            </li>
-        </ul>
+    <div class="particulas" aria-hidden="true"></div>
+
+    <nav class="navegacao" aria-label="Navegação principal">
+        <div class="navegacao-conteudo">
+            <a href="#inicio" class="marca" aria-label="Ir para o início">MS</a>
+            <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="menu" id="menu-principal">
+                <li><a href="#inicio" class="menu-link ativo">Início</a></li>
+                <li><a href="#sobre" class="menu-link">Sobre</a></li>
+                <li><a href="#projetos" class="menu-link">Projetos</a></li>
+                <li><a href="#contato" class="menu-link">Contato</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main id="inicio" class="cabecalho">
-        <img src="./img/eu.png" alt="Foto de Matheus" class="foto-perfil">
+        <img src="/img/eu.png" alt="Foto de Matheus" class="foto-perfil">
         <h1>Matheus Selzelein</h1>
         <p class="cabecalho-sub-titulo">Desenvolvedor Full-Stack</p>
     </main>
 
-
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
+    <section id="sobre" class="sobre secao-observada">
+        <h2 class="secao-titulo">Sobre Mim</h2>
         <div class="sobre-caixa">
             <p class="sobre-paragrafo">
-                Profundo entusiasmo por contribuir com um time voltado à criação de soluções eficazes e acessíveis é demonstrado. Formação em desenvolvimento web com ênfase em PHP e experiência prática na construção de plataformas gerenciais são trazidas. A vontade de crescer em um ambiente dinâmico e desafiador está alinhada com a busca por inovações que impactem positivamente a comunidade e fomentem o desenvolvimento tecnológico.
+                Sou desenvolvedor com formação em desenvolvimento web e ênfase em PHP. Gosto de transformar ideias em soluções claras, eficazes e acessíveis, sempre unindo responsabilidade, dedicação e atenção aos detalhes.
+            </p>
+            <p class="sobre-paragrafo">
+                Tenho facilidade para me comunicar e valorizo a troca de conhecimento em equipe. Sou curioso, gosto de aprender e busco novos desafios que me permitam evoluir profissionalmente, ampliar minhas habilidades e contribuir de forma positiva em cada projeto.
             </p>
         </div>
     </section>
 
-
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Projetos</h2>
+    <section id="projetos" class="projetos secao-observada">
+        <h2 class="secao-titulo">Projetos</h2>
+        <p class="secao-introducao">Alguns trabalhos e estudos que fazem parte da minha trajetória.</p>
         <div class="projetos-caixa">
-
-            <div class="projetos-card">
-                <img src="./img//background/backgroundanimado.PNG" alt="projeto 1" class="projetos-imagem">
+            <article class="projetos-card">
+                <div class="projeto-midia">
+                    <img src="/img/background/backgroundanimado.PNG" alt="Demonstração do projeto Background Animado" class="projetos-imagem" loading="lazy">
+                </div>
                 <div class="caixa-textos">
+                    <span class="projeto-etiqueta">Interação visual</span>
                     <h3 class="info-projetos">Background Animado</h3>
-                    <p class="paragrafo-projetos">Um projeto realizado para fazer uma animação de particulas na tela onde quando o mouse passa pelas particulas elas se afastam, esse projeto foi realizado em javaScript, css e hmtl.</p>
-                    </p>
+                    <p class="paragrafo-projetos">Animação de partículas desenvolvida com JavaScript, CSS e HTML. Ao passar o mouse, as partículas reagem e se afastam de forma interativa.</p>
                 </div>
-            </div>
-            <div class="projetos-card">
-                <img src="./img/banco_artigos/bancoArtigos.jpeg" alt="projeto 2" class="projetos-imagem">
+            </article>
+
+            <article class="projetos-card">
+                <div class="projeto-midia">
+                    <img src="/img/banco_artigos/bancoArtigos.jpeg" alt="Estrutura do banco de dados do projeto de artigos" class="projetos-imagem" loading="lazy">
+                </div>
                 <div class="caixa-textos">
-                    <h3 class="info-projetos">Banco de Dados</h3>
-                    <p class="paragrafo-projetos">Aqui tem toda a relação de um banco de dados utilizado para armazenar dados do site, artigos realizados e os dados dos usuários, a ferramente utilizada foi o mySQL.</p>
-                    </p>
+                    <span class="projeto-etiqueta">Banco de dados</span>
+                    <h3 class="info-projetos">Banco de Artigos</h3>
+                    <p class="paragrafo-projetos">Estrutura em MySQL criada para armazenar os artigos do site e os dados de seus usuários, organizando as relações necessárias ao sistema.</p>
                 </div>
-            </div> 
-            <div class="projetos-card">
-                <img src="./img/prints_biblioteca/" alt="projeto 3" class="projetos-imagem">
+            </article>
+
+            <article class="projetos-card projeto-biblioteca">
+                <div class="projeto-galeria" aria-label="Telas do sistema de biblioteca">
+                    <img src="/img/prints_biblioteca/Inicial.PNG" alt="Tela inicial do sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/LoginPreenchido.PNG" alt="Tela de login do sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Home.PNG" alt="Tela principal do sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Home2.PNG" alt="Segunda visualização da tela principal" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Aluno.PNG" alt="Tela de alunos do sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Aluno2.PNG" alt="Cadastro de aluno no sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Autores.PNG" alt="Tela de autores do sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Autores2.PNG" alt="Cadastro de autor no sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Categoria.PNG" alt="Tela de categorias do sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Categoria2.PNG" alt="Cadastro de categoria no sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Emprestimo.PNG" alt="Tela de empréstimos do sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Emprestimo2.PNG" alt="Cadastro de empréstimo no sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Livro.PNG" alt="Tela de livros do sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                    <img src="/img/prints_biblioteca/Livro2.PNG" alt="Cadastro de livro no sistema de biblioteca" class="projetos-imagem" loading="lazy">
+                </div>
                 <div class="caixa-textos">
-                    <h3 class="info-projetos">Loja de tenis</h3>
-                    <p class="paragrafo-projetos">Uma página para realização de compras de tênis do seu agrado.</p>
-                    </p>
+                    <span class="projeto-etiqueta">Sistema gerencial</span>
+                    <h3 class="info-projetos">Gerenciamento de Biblioteca</h3>
+                    <p class="paragrafo-projetos">Desenvolvi um sistema de gerenciamento de biblioteca em PHP utilizando MVC. O sistema possui login, cadastro e gerenciamento de livros, alunos e autores, além do controle de empréstimos. Também implementei relacionamentos entre as tabelas para associar livros e autores, utilizando rotas, autoload, POO e CRUD completo. O projeto foi desenvolvido com foco na organização e separação das responsabilidades do sistema. Deslize a galeria para conhecer as telas.</p>
                 </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="contato" class="contatos secao-observada">
+        <h2 class="secao-titulo">Entre em contato</h2>
+        <p class="secao-introducao">Envie uma mensagem pelo WhatsApp ou conecte-se comigo pelo LinkedIn.</p>
+        <div class="contato-caixa">
+            <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+                <div class="grupo-form">
+                    <label for="nome">Nome</label>
+                    <input type="text" placeholder="Como posso chamar você?" class="campo-form" id="nome" required>
+                </div>
+                <div class="grupo-form">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea class="campo-form" placeholder="Digite sua mensagem" rows="4" id="mensagem" required></textarea>
+                </div>
+                <button type="submit" class="botao-form botao-whatsapp">
+                    <span aria-hidden="true">✦</span> Enviar pelo WhatsApp
+                </button>
+            </form>
+
+            <div class="redes-contato" aria-label="Redes profissionais">
+                <!-- LinkedIn: substitua o texto abaixo por um link <a> com a URL do seu perfil quando ela estiver disponível. -->
+                <a href="https://www.linkedin.com/in/matheus-selzelein/" class="botao-social linkedin" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <svg><path d="M6.5 8.5H3.3V19h3.2V8.5ZM4.9 3A1.9 1.9 0 1 0 5 6.8 1.9 1.9 0 0 0 4.9 3ZM19 13c0-3.2-1.7-4.7-4-4.7a3.5 3.5 0 0 0-3.2 1.8V8.5H8.6V19h3.2v-5.2c0-1.4.3-2.8 2.1-2.8 1.8 0 1.8 1.7 1.8 2.9V19H19v-6Z"/></svg>
+                    LinkedIn <small>— linkedin.com/matheus-selzelein/</small>
+                </a>
             </div>
         </div>
-
     </section>
-
-    <section id="contato" class="contato">
-        <h2 class="contatos-titulo">Entre em contato</h2>
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-            <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form" id="nome">
-            </div>
-            <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite uma mensagem" rows="4" id="mensagem"></textarea>
-            </div>
-            <button type="submit" class="botao-form">Enviar whatsapp</button>
-        </form>
-
-    </section>
-
-    <script>
-
-        function enviarWhats(event) {
-            event.preventDefault()
-
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem');
-            const telefone = '5541999642906';
-
-            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
-            const msgFormatada = encodeURIComponent(texto)
-
-            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
-
-            window.open(url, '_blank')
-        }
-    </script>
 </body>
 
 </html>
